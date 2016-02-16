@@ -6,12 +6,13 @@
         {
             message = string.Empty;
 
-            if (args.Length == 1)
-                return true;
-
-            message = "No sentence provided";
-
-            return false;
+            if (args == null || args.Length != 1)
+            {
+                message = "No sentence provided";
+                return false;
+            }
+            
+            return true;
         }
     }
 }
